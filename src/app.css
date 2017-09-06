@@ -1,1 +1,7 @@
 /* @import url('bootstrap/dist/css/bootstrap.css'); */
+
+.navbar ul li a {
+    text-transform: uppercase;
+    font-size: .8em;
+    font-weight: 500;
+}
