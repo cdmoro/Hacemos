@@ -3,20 +3,20 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="#" v-html="title"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse collapse" id="navbarSupportedContent">
+          <!-- Elementos del menú -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item" v-for="item in menu" :key="item.to" v-on:click="cerrarMenu">
               <router-link class="nav-link" :to="item.to" v-html="item.nombre"></router-link>
             </li>
+            <!-- Iconos de las redes -->
             <li class="nav-item" v-for="item in social" :key="item.nombre">
               <a class="nav-link" target="_blank" :href="'http://' + item.url + '/' + item.nombre" :style="'color: ' + item.color + ' !important'">
                 <i :class="'fa fa-lg fa-' + item.font" aria-hidden="true"></i>
-                 <!-- /{{item.nombre}} -->
+                <span class="d-lg-none">/{{item.nombre}}</span>
               </a>
             </li>
           </ul>
