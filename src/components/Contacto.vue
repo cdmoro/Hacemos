@@ -11,6 +11,11 @@
               <input type="text" class="form-control" placeholder="Last name">
             </div>
           </div>
+          <div class="row">
+            <div class="col">
+              
+            </div>
+          </div>
         </form>
       </div>
     </div>
