@@ -6,10 +6,11 @@ import Fotos from './components/Fotos.vue'
 import Contacto from './components/Contacto.vue'
 import e404 from './components/404.vue'
 import VueRouter from 'vue-router'
+import VueParticles from 'vue-particles'
 import 'bootstrap'
-//import 'bootstrap/dist/css/bootstrap.css'
 
 Vue.use(VueRouter)
+Vue.use(VueParticles)
 
 const routes = [
   { path: '/', component: Home, meta: {title: 'Home'} },
@@ -23,8 +24,16 @@ const router = new VueRouter({
   routes // forma corta para routes: routes
 })
 
-new Vue({
+const vm = new Vue({
   el: '#app',
   router,
+  data: {
+    nombreApp: "Demo"
+  },
   render: h => h(App)
+})
+
+router.beforeEach((to, from, next) => {
+  document.title = vm.nombreApp + " // " + to.meta.title
+  next()
 })
