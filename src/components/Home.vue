@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="home">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-3">Fluid jumbotron</h1>

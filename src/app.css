@@ -1,7 +1,31 @@
-/* @import url('bootstrap/dist/css/bootstrap.css'); */
+@media (min-width:992px) {
+    .navbar {
+        background-color: transparent !important;
+    }
+    .navbar-dark .navbar-brand, .navbar-dark .navbar-nav .nav-link {
+        color: #555 !important;
+    }
+    .navbar .router-link-exact-active {
+        border-bottom: #555 solid 2px !important;
+        color: rgba(255,255,255,.75) !important;
+    }
+}
+
+.navbar {
+    transition: all 1s;
+}
 
 .navbar ul li a {
     text-transform: uppercase;
     font-size: .8em;
     font-weight: 500;
+}
+
+.navbar .router-link-exact-active {
+    border-bottom: #EEE solid 2px;
+    color: #FFF !important;    
+}
+
+section {
+    margin-top: 100px;
 }
