@@ -11,7 +11,13 @@
         <div class="navbar-collapse collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item" v-for="item in menu" :key="item.to" v-on:click="cerrarMenu">
-              <router-link class="nav-link" :to="item.to" v-text="item.nombre"></router-link>
+              <router-link class="nav-link" :to="item.to" v-html="item.nombre"></router-link>
+            </li>
+            <li class="nav-item" v-for="item in social" :key="item.nombre">
+              <a class="nav-link" target="_blank" :href="'http://' + item.url + '/' + item.nombre" :style="'color: ' + item.color + ' !important'">
+                <i :class="'fa fa-lg fa-' + item.font" aria-hidden="true"></i>
+                 <!-- /{{item.nombre}} -->
+              </a>
             </li>
           </ul>
         </div>
@@ -37,6 +43,27 @@ export default {
         }, {
           nombre: "Fotos",
           to: "fotos"
+        }, {
+          nombre: '<i class="fa fa-lg fa-envelope-o" aria-hidden="true"></i> Contacto',
+          to: "contacto"
+        }
+      ],
+      social: [
+        {
+          nombre: "templateok",
+          font: "facebook-official",
+          url: "www.facebook.com",
+          color: "#3954A1"
+        }, {
+          nombre: "template",
+          font: "twitter",
+          url: "www.twitter.com",
+          color: "#56D7FE"
+        }, {
+          nombre: "templateok",
+          font: "instagram",
+          url: "www.instagram.com",
+          color: "#C0328D"
         }
       ]
     }
