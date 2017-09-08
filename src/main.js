@@ -16,19 +16,23 @@ const routes = [
   { path: '/', component: Home, meta: {title: 'Home'} },
   { path: '/historia', component: Historia, meta: {title: 'Historia'} },
   { path: '/fotos', component: Fotos, meta: {title: 'Fotos'} },
-  { path: '/contacto', component: Contacto, meta: {title: 'Contacto'} },
+  { path: '/contacto', component: Contacto, meta: {title: 'Contacto', icono: 'envelope-o'} },
   { path: '*', component: e404, meta: {title: 'Página no encontrada'}}
 ]
 
 const router = new VueRouter({
-  routes // forma corta para routes: routes
+  routes, // forma corta para routes: routes
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
 
 const vm = new Vue({
   el: '#app',
   router,
   data: {
-    nombreApp: "Demo"
+    nombreApp: "Demo",
+    rutas: routes
   },
   render: h => h(App)
 })

@@ -4,7 +4,7 @@
       <div class="form-row justify-content-md-center">
         <form class="col-md-6 col-sm-12">
           <div class="form-row">
-            <div class="col">
+            <div class="col-md-6 col-sm-12">
               <div class="form-group input-group">
                 <div class="input-group-addon">
                   <i class="fa fa-user"></i>
@@ -12,7 +12,7 @@
                 <input type="text" class="form-control" placeholder="Nombre">
               </div>
             </div>
-            <div class="col">
+            <div class="col-md-6 col-sm-12">
               <div class="form-group input-group">
                 <div class="input-group-addon">@</div>
                 <input type="text" class="form-control" placeholder="Mail">
