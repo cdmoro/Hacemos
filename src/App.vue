@@ -3,20 +3,19 @@
     <!-- <navbar menu="menu"></navbar> -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <button type="button" id="sideBarBtn" data-toggle="collapse" data-target="#mainSidebar" aria-controls="mainSidebar" aria-expanded="true" aria-label="Toggle navigation">
-          <i class="fa fa-bars"></i>
-        </button>
-        <a class="navbar-brand" href="#" v-html="title"></a>
+        <a class="navbar-brand" href="#">
+          <i class="fa fa-bath" aria-hidden="true"></i> {{title}}
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse collapse" id="navbarSupportedContent">
           <!-- Elementos del menú -->
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item menu-item" v-for="item in this.$router.options.routes" :key="item">
-              <router-link v-if="item.path !== '*'" class="nav-link" :to="item.path" data-toggle="collapse" data-target=".navbar-collapse.show">
-                <i v-if="item.meta.icono" :class="'fa fa-lg fa-' + item.meta.icono" aria-hidden="true"></i>
-                {{ item.meta.title }}
+            <li class="nav-item menu-item" v-for="(item, key) in menu" :key="key">
+              <router-link class="nav-link" :to="item.to" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <i v-if="item.icono" :class="'fa fa-lg fa-' + item.icono" aria-hidden="true"></i>
+                {{ item.nombre }}
               </router-link>
             </li>
             <!-- Iconos de las redes -->
@@ -30,37 +29,12 @@
         </div>
       </div>
     </nav>
-    <div id="mainSidebar" class="sidebar collapse show">
-      <div class="input-group">
-        <input class="form-control" type="text" placeholder="Buscar..." v-model="filtro">
-        <span v-show="filtro" class="input-group-btn">
-          <button class="btn btn-secondary" type="button" @click="filtro = ''" title="Quitar filtro">
-            <i class="fa fa-close"></i>
-          </button>
-        </span>
-      </div>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item menu-item" v-for="(value, key) in filteredItems" :key="key">
-          <router-link class="nav-link" :to="value.to" data-toggle="collapse" data-target="#mainSidebar">
-            <i v-if="value.icono" :class="'fa fa-lg fa-' + value.icono" aria-hidden="true"></i>
-            {{ value.nombre }}
-          </router-link>
-        </li>
-        <!-- Iconos de las redes -->
-        <li class="nav-item" v-for="(value, key) in social" :key="key">
-          <a class="nav-link" target="_blank" :href="'http://' + value.url + '/' + value.nombre" :style="'color: ' + value.color + ' !important'">
-            <i :class="'fa fa-lg fa-' + value.font" aria-hidden="true"></i>
-            <span class="d-lg-none">/{{value.nombre}}</span>
-          </a>
-        </li>
-      </ul>
-    </div>
     <router-view></router-view>
-    <pre class="m-5 card">
+    <!-- <pre class="m-5 card">
         <div class="card-body">
           {{$data}}
         </div>
-      </pre>
+      </pre> -->
   </div>
 </template>
 
@@ -76,7 +50,7 @@ export default {
   },
   data() {
     return {
-      title: '<i class="fa fa-bath" aria-hidden="true"></i> Template app',
+      title: 'Template app',
       filtro: "",
       menu: [
         {
