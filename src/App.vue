@@ -57,12 +57,18 @@ export default {
           nombre: "Home",
           to: "/"
         }, {
-          nombre: "Historia",
-          to: "historia"
+          nombre: "Nosotros",
+          to: "nosotros"
         }, {
+          nombre: "Gremiales",
+          to: "gremiales"
+        }, {
+          nombre: "Sociales",
+          to: "sociales"
+        }/*, {
           nombre: "Fotos",
           to: "fotos"
-        }, {
+        }*/, {
           nombre: 'Contacto',
           to: "contacto",
           icono: "envelope-o"

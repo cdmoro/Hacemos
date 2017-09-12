@@ -1,5 +1,5 @@
 <template>
-  <section id="historia">
+  <section id="Nosotros">
     <div class="container">
       <h2>Historia</h2>
       <div class="float-right mt-3 ml-3 mb-3">
