@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <!-- <navbar menu="menu"></navbar> -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <nav id="mainNav" class="navbar fixed-top navbar-expand-lg navbar-dark bg-transparent">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <i class="fa fa-bath" aria-hidden="true"></i> {{title}}
+          <i class="d-none d-sm-inline-block fa fa-bandcamp" aria-hidden="true"></i> {{title}}
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -13,7 +13,7 @@
           <!-- Elementos del menú -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item menu-item" v-for="(item, key) in menu" :key="key">
-              <router-link class="nav-link" :to="item.to" data-toggle="collapse" data-target=".navbar-collapse.show">
+              <router-link class="nav-link" :to="item.to">
                 <i v-if="item.icono" :class="'fa fa-lg fa-' + item.icono" aria-hidden="true"></i>
                 {{ item.nombre }}
               </router-link>
@@ -50,7 +50,7 @@ export default {
   },
   data() {
     return {
-      title: 'Template app',
+      title: '[Título de la página]',
       filtro: "",
       menu: [
         {
@@ -93,6 +93,28 @@ export default {
         }
       ]
     }
+  },
+  mounted: function() {
+    $(window).scroll(function() {
+        if ($("#mainNav").offset().top > 10) {
+          $("#mainNav").addClass("navbar-shrink");
+        } else {
+          $("#mainNav").removeClass("navbar-shrink");
+        }
+    });
+
+    if ($(".router-link-exact-active").text().trim() == "Home")
+      $(".navbar").removeClass("bg-dark").addClass("bg-transparent");
+    else
+      $(".navbar").removeClass("bg-transparent").addClass("bg-dark");
+
+    $(".menu-item a").click(function() {
+      $('.navbar-collapse').collapse('hide');
+      if ($(this).text().trim() == "Home")
+        $(".navbar").removeClass("bg-dark").addClass("bg-transparent");
+      else
+        $(".navbar").removeClass("bg-transparent").addClass("bg-dark");
+    })
   }
 }
 </script>

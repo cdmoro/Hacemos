@@ -1,7 +1,7 @@
 @media (min-width:992px) {
-    .navbar {
-        background-color: rgba(0,0,0,.7) !important;
-    }
+   /* .navbar {
+        background-color: transparent !important;
+    }*/
     /*.navbar-dark .navbar-brand, .navbar-dark .navbar-nav .nav-link {
         color: #555 !important;
     }*/
@@ -9,51 +9,38 @@
         border-bottom: #555 solid 2px !important;
         color: rgba(255,255,255,.75) !important;
     }*/
+
+    .navbar.navbar-shrink {
+        background-color: #607D8B !important;
+    }
+}
+
+@media (max-width:992px) {
+    .navbar {
+        background-color: #607D8B !important;
+    }
 }
 
 @media (max-width:500px) {
     #home .wrap-banner {
-        height: 450px !important;
+       /* height: 450px !important;*/
         
+    }
+    h1.display-3 {
+        font-size: 3.5em;
     }
 }
 
-#home .wrap-banner {
-   /* background-image: url("assets/back.jpeg");
-	background-size: cover;
-    background-position: top center;*/
-    height: 700px;
-
-	position: relative;
-	-ms-flex-align: center;
-	-webkit-box-align: center;
-	align-items: center;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	/* height: 100%; */
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-}
-
-.main-title {
-	color: #fff;
-	z-index: 999;
-}
-
-#particles-js {
-	background-image: url(assets/sky.871d198.jpg);
-	background-size: cover;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+html, body, #app {
+    height: 100%;
 }
 
 .navbar {
     transition: all 1s;
+}
+
+.bg-dark {
+    background-color: #607D8B !important;
 }
 
 .navbar ul li a {
@@ -71,6 +58,56 @@
     outline: none;
   }
 
+.navbar-toggler {
+	outline: none !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: rgba(255,255,255,.8);
+}
+
 section {
-    margin-top: 100px;
+    padding-top: 100px;
+}
+
+#logo .fa.fa-bandcamp {
+	font-size: 130px;
+	text-shadow: 4px 4px 3px #000;
+}
+
+#home {
+    height: 100%;
+}
+
+#home .wrap-banner {
+    position: relative;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.main-title {
+    color: #fff;
+    z-index: 999;
+}
+
+#particles-js {
+    background-image: url(assets/sky.871d198.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#map {
+    height: 350px;
 }
