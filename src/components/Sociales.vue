@@ -3,24 +3,28 @@
     <div class="container">      
       <div class="row justify-content-md-center post-wrapper">
         <div class="col-md-10 col-xs-12">
-          <h4 class="mb-5">Estos son los últimos videos de nuestro canal de YouTube</h4>
+          <h4 class="mb-5 row align-items-center">
+            <div class="d-none d-md-block col-auto">
+              <i class="fa fa-2x fa-youtube-play" aria-hidden="true" style="color: rgb(255, 0, 0);"></i>
+            </div>
+            <div class="col">
+              Estos son los últimos videos de nuestro canal de YouTube
+            </div>
+            <div class="col-auto">
+              <a href="https://www.youtube.com" class="btn btn-danger">
+                <i class="fa fa-video-camera" aria-hidden="true"></i>
+                Ir al canal
+              </a>
+            </div>
+          </h4>
           <template v-for="i in 3">
             <div class="post mb-5" :key="i">
-              <div class="post-date text-muted">Subido el {{videos[i-1].fecha}}</div>
               <h2 class="post-title">{{videos[i-1].title}}</h2>
               <iframe width="100%" height="400"
                 :src="'https://www.youtube.com/embed/' + videos[i-1].id">
               </iframe> 
+              <div class="post-date text-muted">Subido el {{videos[i-1].fecha}}</div>
               <div class="text-muted mt-3 mb-3">{{videos[i-1].desc}}</div>
-              <!-- <h2 class="post-title">{{videos[i].title}}</h2>
-              <div>
-                <img class="w-100" :src="'http://via.placeholder.com/500x350/' + colores[i] + '/333333?text=Imagen+post'">
-              </div>
-              <div class="text-muted mt-3 mb-3">{{videos[i].body}}</div>
-              <div class="entry-meta">
-                <a class="author-wrap" href="#"><img class="avatar" :src="'http://via.placeholder.com/50x50/' + colores.reverse()[i] + '/333333?text=A' " /> por Nombre autor </a>
-                <a class="btn btn-info float-right mt-1" href="#">Leer nota completa &raquo;</a>
-              </div> -->
             </div>
           </template>
         </div>

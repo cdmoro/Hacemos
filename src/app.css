@@ -124,7 +124,7 @@ section {
 }
 
 .contacto.jumbotron {
-    background: url("../src/assets/contacto.jpg") no-repeat center center;
+    background: url("assets/contacto.jpg") no-repeat center center;
     color: #FFF;
     background-size: cover;
 }

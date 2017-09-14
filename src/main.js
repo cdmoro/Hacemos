@@ -8,6 +8,7 @@ import Gremiales from './components/Gremiales.vue'
 import Sociales from './components/Sociales.vue'
 import e404 from './components/404.vue'
 import VueRouter from 'vue-router'
+import VueImg from 'v-img'
 //import VueResource from 'vue-resource'
 import VueParticles from 'vue-particles'
 import 'bootstrap'
@@ -15,6 +16,7 @@ import 'bootstrap'
 Vue.use(VueRouter)
 //Vue.use(VueResource)
 Vue.use(VueParticles)
+Vue.use(VueImg)
 
 const routes = [
   { path: '/', component: Home, meta: {title: 'Home'} },
