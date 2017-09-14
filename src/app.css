@@ -11,13 +11,13 @@
     }*/
 
     .navbar.navbar-shrink {
-        background-color: #607D8B !important;
+        background-color: #343a40 !important;
     }
 }
 
 @media (max-width:992px) {
     .navbar {
-        background-color: #607D8B !important;
+        background-color: #343a40 !important; /*#607D8B*/
     }
 }
 
@@ -39,9 +39,9 @@ html, body, #app {
     transition: all 1s;
 }
 
-.bg-dark {
+/*.bg-dark {
     background-color: #607D8B !important;
-}
+}*/
 
 .navbar ul li a {
     text-transform: uppercase;
@@ -110,4 +110,9 @@ section {
 
 #map {
     height: 350px;
+}
+
+footer {
+    padding-top: 40px;
+    color: #FFF;
 }

@@ -29,11 +29,20 @@
         </div>
       </div>
     </nav>
-    <video width="320" height="240" controls>
-                    <source src="assets/manifestacion.mp4" type="video/mp4">
-                    Tu explorador no soporta videos
-                </video> 
     <router-view></router-view>
+    <footer class="bg-dark">
+      <div class="container text-center">
+        <h5>¡Enterate de todo en nuestras redes sociales!</h5>
+        <div class="row p-5">
+            <div v-for="(value, i) in social" :key="i" class="col">
+              <a class="d-block m-3" target="_blank" :href="'http://' + value.url + '/' + value.nombre" :style="'color: ' + value.color + ' !important'">
+                <i :class="'fa fa-3x fa-' + value.font" aria-hidden="true"></i>
+                <div style="color:#FFF">{{value.nombre}}</div>
+              </a>
+            </div>
+        </div>
+      </div>
+    </footer>
     <!-- <pre class="m-5 card">
         <div class="card-body">
           {{$data}}

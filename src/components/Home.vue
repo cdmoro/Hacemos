@@ -30,8 +30,21 @@
             </vue-particles>
         </div>
         <section id="services">
-            <div class="container">
-                 
+            <div class="mb-5 container">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-8 col-xs-12">
+                        <video width="100%" controls>
+                            <source src="../src/assets/manifestacion.mp4" type="video/mp4">
+                            Tu explorador no soporta videos
+                        </video> 
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <div class="text-muted">05/08/2017</div>
+                        <div>
+                            Video sobre la movilización
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <div class="container">
