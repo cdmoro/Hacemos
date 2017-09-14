@@ -34,7 +34,7 @@
                 <div class="row justify-content-md-center">
                     <div class="col-md-8 col-xs-12">
                         <video width="100%" controls>
-                            <source src="../src/assets/manifestacion.mp4" type="video/mp4">
+                            <source src="css/assets/manifestacion.mp4" type="video/mp4">
                             Tu explorador no soporta videos
                         </video> 
                     </div>

@@ -17,7 +17,7 @@
               </div>
               <div class="text-muted mt-3 mb-3">{{value.body}}</div>
               <div class="entry-meta">
-                <a class="author-wrap" href="#"><img class="avatar" :src="'http://via.placeholder.com/50x50/' + colores[Math.floor((Math.random() * 5))] + '/333333?text=A' " /> por Camilo Canegato </a>
+                <a class="author-wrap" href="#"><img class="avatar" :src="'https://via.placeholder.com/50x50/' + colores[Math.floor((Math.random() * 5))] + '/333333?text=A' " /> por Camilo Canegato </a>
                 <a class="btn btn-info float-right mt-1" href="#">Leer nota completa &raquo;</a>
               </div>
               <!-- <a v-if="post._embedded['wp:featuredmedia'][0].media_details.sizes['large']" :href="post.link">

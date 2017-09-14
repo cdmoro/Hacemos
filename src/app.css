@@ -105,7 +105,7 @@ section {
 }
 
 #particles-js {
-    background-image: url(assets/sky.871d198.jpg);
+    background-image: url("assets/sky.871d198.jpg");
     background-size: cover;
     position: absolute;
     top: 0;
