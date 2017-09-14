@@ -31,6 +31,7 @@
         </div>
         <section id="services">
             <div class="container">
+                 
             </div>
         </section>
         <div class="container">
@@ -53,11 +54,13 @@
         methods: {
             initMap() {
                 var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 15,
+                    zoom: 16,
                     scrollwheel: false,
                     draggable: false,
                     disableDefaultUI: true,
-                    center: new google.maps.LatLng(-34.6037132,-58.3816179)
+                    center: new google.maps.LatLng(-34.6037132,-58.3816179),
+                    // https://snazzymaps.com/style/119980/e
+                    styles: [{"featureType":"all","elementType":"all","stylers":[{"invert_lightness":true},{"saturation":10},{"lightness":30},{"gamma":0.5},{"hue":"#435158"}]}]
                 });
                 var marker = new google.maps.Marker({
                     position: new google.maps.LatLng(-34.6037132,-58.3816179),

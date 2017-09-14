@@ -19,16 +19,20 @@
               </router-link>
             </li>
             <!-- Iconos de las redes -->
-            <li class="nav-item" v-for="(value, key) in social" :key="key">
+            <li v-if="value.header" class="nav-item" v-for="(value, key) in social" :key="key">
               <a class="nav-link" target="_blank" :href="'http://' + value.url + '/' + value.nombre" :style="'color: ' + value.color + ' !important'">
                 <i :class="'fa fa-lg fa-' + value.font" aria-hidden="true"></i>
-                <span class="d-lg-none">/{{value.nombre}}</span>
+                <span class="d-lg-none" style="color:#FFF">/{{value.nombre}}</span>
               </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    <video width="320" height="240" controls>
+                    <source src="assets/manifestacion.mp4" type="video/mp4">
+                    Tu explorador no soporta videos
+                </video> 
     <router-view></router-view>
     <!-- <pre class="m-5 card">
         <div class="card-body">
@@ -79,17 +83,30 @@ export default {
           nombre: "templateok",
           font: "facebook-official",
           url: "www.facebook.com",
-          color: "#3954A1"
+          color: "#3954A1",
+          header: true
         }, {
           nombre: "template",
           font: "twitter",
           url: "www.twitter.com",
-          color: "#56D7FE"
+          color: "#56D7FE",
+          header: true
         }, {
           nombre: "templateok",
           font: "instagram",
           url: "www.instagram.com",
           color: "#C0328D"
+        }, {
+          nombre: "templateok",
+          font: "youtube-play",
+          url: "www.youtube.com",
+          color: "#FF0000",
+          header: true
+        }, {
+          nombre: "templateok",
+          font: "wordpress",
+          url: "www.wordpress.com",
+          color: "#1D8BBE"
         }
       ]
     }
