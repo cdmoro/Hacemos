@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="jumbotron text-center">
+    <div class="contacto jumbotron text-center">
       <div class="container">
         <h1 class="jumbotron-heading mt-5">Contacto</h1>
         <p class="lead text-muted">Estamos para ayudarte, mandanos cualquier duda o comentario.</p>
@@ -10,7 +10,7 @@
         </p> -->
       </div>
     </div>
-    <section id="historia">
+    <section id="contacto">
       <div class="container">
         <div class="form-row justify-content-md-center">
           <form class="col-md-6 col-sm-12">

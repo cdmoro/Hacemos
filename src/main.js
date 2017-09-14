@@ -5,6 +5,7 @@ import Nosotros from './components/Nosotros.vue'
 import Fotos from './components/Fotos.vue'
 import Contacto from './components/Contacto.vue'
 import Gremiales from './components/Gremiales.vue'
+import Sociales from './components/Sociales.vue'
 import e404 from './components/404.vue'
 import VueRouter from 'vue-router'
 //import VueResource from 'vue-resource'
@@ -20,6 +21,7 @@ const routes = [
   { path: '/nosotros', component: Nosotros, meta: {title: 'Nosotros'} },
   { path: '/fotos', component: Fotos, meta: {title: 'Fotos'} },
   { path: '/gremiales', component: Gremiales, meta: {title: 'Gremiales'} },
+  { path: '/sociales', component: Sociales, meta: {title: 'Sociales'} },
   { path: '/contacto', component: Contacto, meta: {title: 'Contacto', icono: 'envelope-o'} },
   { path: '*', component: e404, meta: {title: 'Página no encontrada'}}
 ]

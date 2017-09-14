@@ -1,12 +1,25 @@
 <template>
   <section id="gremiales">
-    <div class="container">
+    <div class="container">      
       <div class="row justify-content-md-center post-wrapper">
         <div class="col-md-8 col-xs-12">
-          <template v-for="(post, index) in posts.results">
-            <div class="post" :key="index">
+          <h4 class="mb-5">Enterate de las últimas novedades de nuestro blog</h4>
+          <div v-show="posts == null" class="alert alert-secondary text-center p-5">
+            <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+            <div class="text-muted small mt-2">Cargando las novedades...</div>
+          </div>
+          <template v-for="(value, i) in posts">
+            <div class="post" :key="i">
               <div class="post-date text-muted">01/08/2017</div>
-              <h2 class="post-title">{{post.gender}}</h2>
+              <h2 class="post-title">{{value.title}}</h2>
+              <div>
+                <img class="w-100" :src="'http://via.placeholder.com/500x350/' + colores[0] + '/333333?text=Imagen+post'">
+              </div>
+              <div class="text-muted mt-3 mb-3">{{value.body}}</div>
+              <div class="entry-meta">
+                <a class="author-wrap" href="#"><img class="avatar" :src="'http://via.placeholder.com/50x50/' + colores[0] + '/333333?text=A' " /> por Camilo Canegato </a>
+                <a class="btn btn-info float-right mt-1" href="#">Leer nota completa &raquo;</a>
+              </div>
               <!-- <a v-if="post._embedded['wp:featuredmedia'][0].media_details.sizes['large']" :href="post.link">
                 <img :src="post._embedded['wp:featuredmedia'][0].media_details.sizes['large'].source_url" />
               </a>
@@ -27,8 +40,9 @@
 export default {
   data() {
     return {
-      apiURL: 'https://randomuser.me/api/?results=10',
-      posts: null
+      apiURL: 'https://jsonplaceholder.typicode.com/posts',
+      posts: null,
+      colores: ["4CAF50", "FFEB3B", "795548", "607D8B", "673AB7"]
     }
   },
   created: function() {
@@ -41,7 +55,7 @@ export default {
 
       xhr.open('GET', self.apiURL)
       xhr.onload = function() {
-        self.posts = JSON.parse(xhr.response)
+        self.posts = JSON.parse(xhr.response).slice(0,2)
       }
       xhr.send()
       /*this.$http.get(this.apiURL).then((respuesta) => {

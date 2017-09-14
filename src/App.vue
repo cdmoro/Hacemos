@@ -30,13 +30,13 @@
       </div>
     </nav>
     <router-view></router-view>
-    <footer class="bg-dark">
+    <footer>
       <div class="container text-center">
         <h5>¡Enterate de todo en nuestras redes sociales!</h5>
-        <div class="row p-5">
-            <div v-for="(value, i) in social" :key="i" class="col">
+        <div class="row pt-2 pb-5 mt-4 justify-content-center">
+            <div v-for="(value, i) in social" :key="i" class="col-md-2 col-sm-4 col-xs-12">
               <a class="d-block m-3" target="_blank" :href="'http://' + value.url + '/' + value.nombre" :style="'color: ' + value.color + ' !important'">
-                <i :class="'fa fa-3x fa-' + value.font" aria-hidden="true"></i>
+                <i :class="'fa fa-2x fa-' + value.font" aria-hidden="true"></i>
                 <div style="color:#FFF">{{value.nombre}}</div>
               </a>
             </div>
@@ -144,3 +144,12 @@ export default {
   }
 }
 </script>
+
+<style>
+  footer {
+    background: #222;
+    margin-top: 30px;
+    padding-top: 40px;
+    color: #FFF;
+  }
+</style>

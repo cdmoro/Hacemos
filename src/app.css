@@ -23,7 +23,8 @@
 
 @media (max-width:500px) {
     #home .wrap-banner {
-       /* height: 450px !important;*/
+       min-height: 500px !important;
+       height: 500px;
         
     }
     h1.display-3 {
@@ -31,7 +32,7 @@
     }
 }
 
-html, body, #app {
+html, body {
     height: 100%;
 }
 
@@ -66,6 +67,10 @@ html, body, #app {
 	color: rgba(255,255,255,.8);
 }
 
+.navbar-shrink {
+	box-shadow: #222 0px 1px 2px 2px;
+}
+
 section {
     padding-top: 100px;
 }
@@ -88,6 +93,7 @@ section {
     display: -ms-flexbox;
     display: flex;
     height: 100%;
+    min-height: 750px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -112,7 +118,13 @@ section {
     height: 350px;
 }
 
-footer {
-    padding-top: 40px;
+#contacto {
+    padding-top: 0;
+    margin-bottom: 100px;
+}
+
+.contacto.jumbotron {
+    background: url("../src/assets/contacto.jpg") no-repeat center center;
     color: #FFF;
+    background-size: cover;
 }
