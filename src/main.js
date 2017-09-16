@@ -9,17 +9,19 @@ import Sociales from './components/Sociales.vue'
 import e404 from './components/404.vue'
 import VueRouter from 'vue-router'
 import VueImg from 'v-img'
-//import VueResource from 'vue-resource'
 import VueParticles from 'vue-particles'
+import $ from 'jquery'
 import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'font-awesome/css/font-awesome.min.css'
+import './app.css'
 
 Vue.use(VueRouter)
-//Vue.use(VueResource)
 Vue.use(VueParticles)
 Vue.use(VueImg)
 
 const routes = [
-  { path: '/', component: Home, meta: {title: 'Home'} },
+  { path: '/', component: Home, meta: {title: 'Inicio'} },
   { path: '/nosotros', component: Nosotros, meta: {title: 'Nosotros'} },
   { path: '/fotos', component: Fotos, meta: {title: 'Fotos'} },
   { path: '/gremiales', component: Gremiales, meta: {title: 'Gremiales'} },
@@ -29,6 +31,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   routes, // forma corta para routes: routes
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }

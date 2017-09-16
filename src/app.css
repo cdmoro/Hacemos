@@ -16,7 +16,7 @@
 }
 
 @media (max-width:992px) {
-    .navbar {
+    .navbar, .navbar.bg-dark.inicio {
         background-color: #343a40 !important; /*#607D8B*/
     }
 }
@@ -40,9 +40,9 @@ html, body {
     transition: all 1s;
 }
 
-/*.bg-dark {
-    background-color: #607D8B !important;
-}*/
+.bg-dark.inicio {
+    background-color: transparent !important;
+}
 
 .navbar ul li a {
     text-transform: uppercase;

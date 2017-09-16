@@ -1,0 +1,71 @@
+{
+    "title": "[Title]",
+    "menu": [
+        {
+            "nombre": "Inicio",
+            "to": "/",
+            "visible": true
+        },
+        {
+            "nombre": "Nosotros",
+            "to": "nosotros",
+            "visible": true
+        },
+        {
+            "nombre": "Gremiales",
+            "to": "gremiales",
+            "visible": true
+        },
+        {
+            "nombre": "Sociales",
+            "to": "sociales",
+            "visible": true
+        },
+        {
+            "nombre": "Contacto",
+            "to": "contacto",
+            "icono": "envelope-o",
+            "visible": true
+        }
+    ],
+    "social": [
+        {
+            "nombre": "templateok",
+            "font": "facebook-official",
+            "url": "www.facebook.com",
+            "color": "#3954A1",
+            "header": true,
+            "visible": true
+        },
+        {
+            "nombre": "template",
+            "font": "twitter",
+            "url": "www.twitter.com",
+            "color": "#56D7FE",
+            "header": true,
+            "visible": true
+        },
+        {
+            "nombre": "templateok",
+            "font": "instagram",
+            "url": "www.instagram.com",
+            "color": "#C0328D",
+            "visible": true
+        },
+        {
+            "nombre": "templateok",
+            "font": "youtube-play",
+            "url": "www.youtube.com",
+            "color": "#FF0000",
+            "header": true,
+            "visible": true
+        },
+        {
+            "nombre": "templateok",
+            "font": "wordpress",
+            "url": "www.wordpress.com",
+            "color": "#1D8BBE",
+            "visible": true
+        }
+    ]
+}
