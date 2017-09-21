@@ -4,10 +4,6 @@
       <div class="container">
         <h1 class="jumbotron-heading mt-5">Contacto</h1>
         <p class="lead text-muted">Estamos para ayudarte, mandanos cualquier duda o comentario.</p>
-        <!-- <p>
-          <a href="#" class="btn btn-primary">Main call to action</a>
-          <a href="#" class="btn btn-secondary">Secondary action</a>
-        </p> -->
       </div>
     </div>
     <section id="contacto">

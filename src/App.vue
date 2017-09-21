@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <!-- <navbar menu="menu"></navbar> -->
     <nav id="mainNav" :class="'navbar fixed-top navbar-expand-lg navbar-dark bg-dark ' + $route.meta.title.toLowerCase()">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -13,7 +12,8 @@
           <!-- Elementos del menú -->
           <ul class="navbar-nav ml-auto">
             <li v-if="item.visible" class="nav-item menu-item" v-for="(item, key) in datos.menu" :key="key">
-              <router-link class="nav-link" :to="item.to" :click="menu()">
+              <!-- <router-link class="nav-link" :to="item.to" :click="menu()"> -->
+              <router-link class="nav-link" :to="item.to">
                 <i v-if="item.icono" :class="'fa fa-lg fa-' + item.icono" aria-hidden="true"></i>
                 {{ item.nombre }}
               </router-link>
@@ -43,21 +43,16 @@
         </div>
       </div>
     </footer>
-    <!-- <pre class="m-5 card">
-            <div class="card-body">
-              {{$data}}
-            </div>
-          </pre> -->
   </div>
 </template>
 
 <script>
+import conf from './conf.json'
 export default {
   name: 'app',
   data() {
     return {
-      conf: 'src/conf.json',
-      datos: []
+      datos: conf
     }
   },
   mounted: function() {
@@ -67,33 +62,19 @@ export default {
       else
         $("#mainNav").removeClass("navbar-shrink")
     })
-  },
-  created: function() {    
-    this.fetchData()
-  },
-  methods: {
-    menu: function() {
-      $('.navbar-collapse').collapse('hide');
-    },
-    fetchData: function() {
-      var xhr = new XMLHttpRequest()
-      var self = this
 
-      xhr.open('GET', self.conf)
-      xhr.onload = function() {
-        self.datos = JSON.parse(xhr.response)
-      }
-      xhr.send()
-    }
+    $(".navbar-nav .menu-item").click(function() {
+      $('.navbar-collapse').collapse('hide');
+    });
   }
 }
 </script>
 
 <style>
-footer {
-  background: #222;
-  margin-top: 30px;
-  padding-top: 40px;
-  color: #FFF;
-}
+  footer {
+    background: #222;
+    margin-top: 30px;
+    padding-top: 40px;
+    color: #FFF;
+  }
 </style>
