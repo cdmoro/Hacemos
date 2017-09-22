@@ -1,7 +1,8 @@
 <template>
   <section id="Nosotros">
     <div class="container">
-      <h2>Historia</h2>
+      <!-- <h2>Historia</h2> -->
+      <h2>{{$route.meta.title}}</h2>
       <div class="float-right mt-3 ml-3 mb-3">
         <img v-img:nos title="Descripción de la foto" src="https://via.placeholder.com/350x250/00BCD4/FFFFFF?text=Foto+I">
         <div class="text-center p-1 bg-info">Descripción de foto</div>

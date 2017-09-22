@@ -3,6 +3,7 @@
     <div class="container">      
       <div class="row justify-content-md-center post-wrapper">
         <div class="col-md-8 col-xs-12">
+          <h2>{{$route.meta.title}}</h2>
           <h4 class="mb-5">Enterate de las últimas novedades de nuestro blog</h4>
           <div v-show="posts == null" class="alert alert-secondary text-center p-5">
             <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>

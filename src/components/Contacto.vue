@@ -2,7 +2,7 @@
   <div>
     <div class="contacto jumbotron text-center">
       <div class="container">
-        <h1 class="jumbotron-heading mt-5">Contacto</h1>
+        <h1 class="jumbotron-heading mt-5">{{$route.meta.title}}</h1>
         <p class="lead text-muted">Estamos para ayudarte, mandanos cualquier duda o comentario.</p>
       </div>
     </div>

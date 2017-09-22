@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav id="mainNav" :class="'navbar fixed-top navbar-expand-lg navbar-dark bg-dark ' + $route.meta.title.toLowerCase()">
+    <nav id="mainNav" :class="'navbar fixed-top navbar-expand-lg navbar-dark ' + $route.meta.title.toLowerCase()">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <i class="d-none d-sm-inline-block fa fa-bandcamp" aria-hidden="true"></i> {{ datos.title }}
@@ -69,12 +69,3 @@ export default {
   }
 }
 </script>
-
-<style>
-  footer {
-    background: #222;
-    margin-top: 30px;
-    padding-top: 40px;
-    color: #FFF;
-  }
-</style>

@@ -3,6 +3,7 @@
     <div class="container">      
       <div class="row justify-content-md-center post-wrapper">
         <div class="col-md-10 col-xs-12">
+          <h2>{{$route.meta.title}}</h2>
           <h4 class="mb-5 row align-items-center">
             <div class="d-none d-md-block col-auto">
               <i class="fa fa-2x fa-youtube-play" aria-hidden="true" style="color: rgb(255, 0, 0);"></i>
