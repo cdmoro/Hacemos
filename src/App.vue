@@ -12,8 +12,7 @@
           <!-- Elementos del menú -->
           <ul class="navbar-nav ml-auto">
             <li v-if="item.visible" class="nav-item menu-item" v-for="(item, key) in datos.menu" :key="key">
-              <!-- <router-link class="nav-link" :to="item.to" :click="menu()"> -->
-              <router-link class="nav-link" :to="item.to">
+              <router-link class="nav-link" :to="item.to" :click="menu()">
                 <i v-if="item.icono" :class="'fa fa-lg fa-' + item.icono" aria-hidden="true"></i>
                 {{ item.nombre }}
               </router-link>
@@ -30,6 +29,15 @@
       </div>
     </nav>
     <router-view></router-view>
+    <div class="container-fluid">
+      <div class="row color-bar">
+          <div class="col" style="background: #F44336"></div>
+          <div class="col" style="background: #FFBF09"></div>
+          <div class="col" style="background: #3BC3B6"></div>
+          <div class="col" style="background: #1A7DB3"></div>
+          <div class="col" style="background: #1D2029"></div>
+      </div>
+    </div>
     <footer>
       <div class="container text-center">
         <h5>¡Enterate de todo en nuestras redes sociales!</h5>
@@ -43,16 +51,21 @@
         </div>
       </div>
     </footer>
+    <!-- <pre class="m-5 card">
+            <div class="card-body">
+              {{$data}}
+            </div>
+          </pre> -->
   </div>
 </template>
 
 <script>
-import conf from './conf.json'
 export default {
   name: 'app',
   data() {
     return {
-      datos: conf
+      conf: 'src/conf.json',
+      datos: []
     }
   },
   mounted: function() {
@@ -62,10 +75,32 @@ export default {
       else
         $("#mainNav").removeClass("navbar-shrink")
     })
-
-    $(".navbar-nav .menu-item").click(function() {
+  },
+  created: function() {    
+    this.fetchData()
+  },
+  methods: {
+    menu: function() {
       $('.navbar-collapse').collapse('hide');
-    });
+    },
+    fetchData: function() {
+      var xhr = new XMLHttpRequest()
+      var self = this
+
+      xhr.open('GET', self.conf)
+      xhr.onload = function() {
+        self.datos = JSON.parse(xhr.response)
+      }
+      xhr.send()
+    }
   }
 }
 </script>
+
+<style>
+footer {
+  background: #222;
+  padding-top: 40px;
+  color: #FFF;
+}
+</style>
