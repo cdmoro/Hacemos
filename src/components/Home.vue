@@ -42,25 +42,37 @@
             <div class="card-deck">
                 <a class="card mb-4" href="#">
                     <div class="card-body">
-                        <h4 class="card-title">Crowfounding</h4>
+                        <h4 class="card-title">
+                            <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                            Crowdfunding
+                        </h4>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     </div>
                 </a>
                 <a class="card mb-4" href="#">
                     <div class="card-body">
-                        <h4 class="card-title">Foro (Plaza seca)</h4>
+                        <h4 class="card-title">
+                            <i class="fa fa-comments-o" aria-hidden="true"></i>
+                            Foro (Plaza seca)
+                        </h4>
                         <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                     </div>
                 </a>
                 <a class="card mb-4" href="#">
                     <div class="card-body">
-                        <h4 class="card-title">Contacto</h4>
+                        <h4 class="card-title">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            Contacto
+                        </h4>
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                     </div>
                 </a>
                 <a class="card mb-4" href="#">
                     <div class="card-body">
-                        <h4 class="card-title">Comunidad</h4>
+                        <h4 class="card-title">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                            Comunidad
+                        </h4>
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                     </div>
                 </a>
