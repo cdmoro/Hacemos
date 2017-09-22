@@ -1,6 +1,6 @@
 @media (max-width:991px) {
     .navbar.inicio {
-        background-color: #343a40;
+        background-color: #343a40 !important;
     }
 }
 
