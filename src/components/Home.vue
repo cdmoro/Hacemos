@@ -38,48 +38,61 @@
                 </div>
             </div>
         </section>
-        <div class="container">
-            <div class="card-deck">
-                <a class="card mb-4" href="#">
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <i class="fa fa-handshake-o" aria-hidden="true"></i>
-                            Crowdfunding
-                        </h4>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <div class="pt-5 pb-3 bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <a class="card border-dark" href="#">
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                                    Crowdfunding
+                                </h4>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content</p>
+                            </div>
+                        </a>
                     </div>
-                </a>
-                <a class="card mb-4" href="#">
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <i class="fa fa-comments-o" aria-hidden="true"></i>
-                            Foro (Plaza seca)
-                        </h4>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <a class="card border-dark" href="#">
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <i class="fa fa-comments-o" aria-hidden="true"></i>
+                                    Foro (Plaza seca)
+                                </h4>
+                                <p class="card-text">This card has supporting text below</p>
+                            </div>
+                        </a>
                     </div>
-                </a>
-                <a class="card mb-4" href="#">
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                            Contacto
-                        </h4>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <a class="card border-dark" href="#">
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    Contacto
+                                </h4>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content</p>
+                            </div>
+                        </a>
                     </div>
-                </a>
-                <a class="card mb-4" href="#">
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <i class="fa fa-globe" aria-hidden="true"></i>
-                            Comunidad
-                        </h4>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <a class="card border-dark" href="#">
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <i class="fa fa-globe" aria-hidden="true"></i>
+                                    Comunidad
+                                </h4>
+                                <p class="card-text">This is a wider card with supporting text below</p>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
-        <div class="mt-5 container">
-            <h2>Nos podés encontrar acá</h2>
+        <div class="mt-4 mb-4 container">
+            <h2>
+                <i class="fa fa-map-marker" aria-hidden="true" style="color: #F44336;"></i>
+                Nos podés encontrar acá
+            </h2>
         </div>
         <div id="map"></div>
     </div>
@@ -120,16 +133,20 @@ export default {
 
 <style>
 .color-bar .col {
-    padding: 15px 0;
+    padding: 20px 0;
 }
 
 a.card {
     color: #212529;
     text-decoration: none;
+    min-height: 150px;
+    height: 100%;
+    transition: background, box-shadow .5s ease;
 }
 
 a.card:hover {
-    background: #526171;
-    color: #FFF;
+	background: #526171;
+	color: #FFF;
+	box-shadow: #222 0px 4px 8px 1px;
 }
 </style>
