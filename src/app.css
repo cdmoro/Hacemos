@@ -1,20 +1,3 @@
-@media (max-width:991px) {
-    .navbar.inicio {
-        background-color: #343a40 !important;
-    }
-}
-
-@media (max-width:500px) {
-   /* #home .wrap-banner {
-       min-height: 300px !important;
-       height: 300px;
-        
-    }*/
-    h1.display-3 {
-        font-size: 3.2em;
-    }
-}
-
 html, body {
     height: 100%;
     font-family: Helvetica;
@@ -29,13 +12,13 @@ html, body {
     background-color: transparent;
 }
 
-.navbar.inicio .nav-link {
-    color: #343a40 !important;
+.inicio.navbar-dark .navbar-nav .nav-link {
+    color: #343a40;
 }
 
-.navbar.inicio .router-link-exact-active {
+.inicio.navbar-dark .router-link-exact-active {
     border-bottom: #343a40 solid 2px;
-    /* color: #FFF !important;     */
+    color: #343a40;
 }
 
 .navbar, .navbar.inicio.navbar-shrink {
@@ -52,10 +35,9 @@ html, body {
     font-weight: 500;
 }
 
-.navbar .router-link-exact-active,
-.navbar.inicio.navbar-shrink .router-link-exact-active {
+.navbar .router-link-exact-active {
     border-bottom: #EEE solid 2px;
-    color: #FFF !important;    
+    color: #FFF;
 }
 
 .navbar a {
@@ -100,6 +82,7 @@ section {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    padding-top: 75px;
 }
 
 .main-title {
@@ -127,7 +110,207 @@ section {
 }
 
 .contacto.jumbotron {
-    background: url("assets/contacto.jpg") no-repeat center center;
+    background: url("assets/contacto.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     color: #FFF;
     background-size: cover;
 }
+
+@media (max-width:991px) {
+    .navbar.inicio {
+        background-color: #343a40;
+    }
+
+    .inicio.navbar-dark .navbar-nav .nav-link {
+        color: rgba(255,255,255,.8);
+    }
+
+    .inicio.navbar-dark .router-link-exact-active {
+        border-bottom: #EEE solid 2px;
+        color: rgba(255,255,255,.8);
+    }
+}
+
+@media (max-width:500px) {
+   /* #home .wrap-banner {
+       min-height: 300px !important;
+       height: 300px;
+        
+    }*/
+    h1.display-3 {
+        font-size: 3.2em;
+    }
+}
+
+.flex-row .btn {
+	border-radius: 40px;
+    box-shadow: 0 5px 13px -5px #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.anim {
+    -moz-transform:translateY(-50%) translateX(-50%);
+    -ms-transform:translateY(-50%) translateX(-50%);
+    -webkit-transform:translateY(-50%) translateX(-50%);
+    transform:translateY(-50%) translateX(-50%);
+    position:absolute;
+    top:50%;
+    left:50%;
+    z-index:-1
+   }
+   .anim:before {
+    position:relative;
+    content:'';
+    display:block;
+    margin-top:100%
+   }
+   .anim:after {
+    content:'';
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    border-radius:50%
+   }
+   .hoverable:hover>.anim {
+    -moz-animation:anim-out .75s;
+    -webkit-animation:anim-out .75s;
+    animation:anim-out .75s
+   }
+   .hoverable:hover>.anim:after {
+    -moz-animation:anim-out-pseudo .75s;
+    -webkit-animation:anim-out-pseudo .75s;
+    animation:anim-out-pseudo .75s
+   }
+   @-webkit-keyframes anim-in {
+    0% {
+     width:0
+    }
+    100% {
+     width:100%
+    }
+   }
+   @-moz-keyframes anim-in {
+    0% {
+     width:0
+    }
+    100% {
+     width:100%
+    }
+   }
+   @-ms-keyframes anim-in {
+    0% {
+     width:0
+    }
+    100% {
+     width:100%
+    }
+   }
+   @keyframes anim-in {
+    0% {
+     width:0
+    }
+    100% {
+     width:100%
+    }
+   }
+   @-webkit-keyframes anim-in-pseudo {
+    0% {
+     background:rgba(0,0,0,0.25)
+    }
+    100% {
+     background:transparent
+    }
+   }
+   @-moz-keyframes anim-in-pseudo {
+    0% {
+     background:rgba(0,0,0,0.25)
+    }
+    100% {
+     background:transparent
+    }
+   }
+   @-ms-keyframes anim-in-pseudo {
+    0% {
+     background:rgba(0,0,0,0.25)
+    }
+    100% {
+     background:transparent
+    }
+   }
+   @keyframes anim-in-pseudo {
+    0% {
+     background:rgba(0,0,0,0.25)
+    }
+    100% {
+     background:transparent
+    }
+   }
+   @-webkit-keyframes anim-out {
+    0% {
+     width:0
+    }
+    100% {
+     width:100%
+    }
+   }
+   @-moz-keyframes anim-out {
+    0% {
+     width:0
+    }
+    100% {
+     width:100%
+    }
+   }
+   @-ms-keyframes anim-out {
+    0% {
+     width:0
+    }
+    100% {
+     width:100%
+    }
+   }
+   @keyframes anim-out {
+    0% {
+     width:0
+    }
+    100% {
+     width:100%
+    }
+   }
+   @-webkit-keyframes anim-out-pseudo {
+    0% {
+     background:rgba(0,0,0,0.25)
+    }
+    100% {
+     background:transparent
+    }
+   }
+   @-moz-keyframes anim-out-pseudo {
+    0% {
+     background:rgba(0,0,0,0.25)
+    }
+    100% {
+     background:transparent
+    }
+   }
+   @-ms-keyframes anim-out-pseudo {
+    0% {
+     background:rgba(0,0,0,0.25)
+    }
+    100% {
+     background:transparent
+    }
+   }
+   @keyframes anim-out-pseudo {
+    0% {
+     background:rgba(0,0,0,0.25)
+    }
+    100% {
+     background:transparent
+    }
+   }

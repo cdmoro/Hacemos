@@ -6,7 +6,16 @@
                     <div id="logo">
                         <i class="fa fa-bandcamp" aria-hidden="true"></i>
                     </div>
-                    <h1 class="display-3">{{bienvenida}}</h1>
+                    <h1 class="display-3">{{ nombre }}</h1>
+                    <p>
+                        <router-link to="/nosotros" class="btn btn-link text-dark">¿Quiénes somos?</router-link>
+                        <a href="#!" data-target="#ifix-companies-contact" class="btn btn-default btn-default-alt hoverable hvr-tr_bx-sh goToContact" role="button">
+                            <span class="anim"></span>
+                            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                            Contactarme
+                        </a>
+                    </p>
+                    <slot></slot>
                 </div>
             </div>
             <vue-particles color="#dedede" :particleOpacity="0.7" :particlesNumber="80" shapeType="circle" :particleSize="4" linesColor="#00695C" :linesWidth="1" :lineLinked="true" :lineOpacity="0.4" :linesDistance="150" :moveSpeed="3" :hoverEffect="true" hoverMode="grab" :clickEffect="true" clickMode="push">
@@ -102,7 +111,7 @@
 export default {
     data() {
         return {
-            bienvenida: "¡Bienvenido/a!"
+            nombre: "Agrupación"
         }
     },
     mounted: function() {
@@ -134,6 +143,12 @@ export default {
 <style>
 .color-bar .col {
     padding: 20px 0;
+    transition: transform .4s ease;
+    transform-origin: 0 0;
+}
+
+.color-bar .col:hover {
+    transform: scale(1, 1.2);
 }
 
 a.card {
@@ -145,8 +160,8 @@ a.card {
 }
 
 a.card:hover {
-	background: #526171;
-	color: #FFF;
-	box-shadow: #222 0px 4px 8px 1px;
+    background: #526171;
+    color: #FFF;
+    box-shadow: #222 0px 4px 8px 1px;
 }
 </style>

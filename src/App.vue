@@ -28,7 +28,14 @@
         </div>
       </div>
     </nav>
-    <router-view></router-view>
+    <router-view>
+      <div class="flex-row mb-4">
+        <router-link class="btn hoverable btn-dark m-1" v-for="(value, i) in datos.main" :to="value.to" v-if="value.visible" :key="i">
+          <span class="anim"></span>
+          {{value.nombre}}
+        </router-link>
+      </div>
+    </router-view>
     <div class="container-fluid">
       <div class="row color-bar">
           <div class="col" style="background: #F44336"></div>
