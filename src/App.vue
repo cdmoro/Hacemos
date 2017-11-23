@@ -2,12 +2,6 @@
   <div id="app">
     <nav id="mainNav" :class="'navbar fixed-top navbar-expand-lg navbar-dark ' + $route.meta.title.toLowerCase()">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <i class="d-none d-sm-inline-block fa fa-bandcamp" aria-hidden="true"></i> {{ datos.title }}
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="navbar-collapse collapse" id="navbarSupportedContent">
           <!-- Elementos del menú -->
           <ul class="navbar-nav ml-auto">
@@ -26,25 +20,12 @@
             </li>
           </ul>
         </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> <span class="small">MENÚ</span>
+        </button>
       </div>
     </nav>
-    <router-view>
-      <div class="flex-row mb-4">
-        <router-link class="btn hoverable btn-dark m-1" v-for="(value, i) in datos.main" :to="value.to" v-if="value.visible" :key="i">
-          <span class="anim"></span>
-          {{value.nombre}}
-        </router-link>
-      </div>
-    </router-view>
-    <div class="container-fluid">
-      <div class="row color-bar">
-          <div class="col" style="background: #F44336"></div>
-          <div class="col" style="background: #FFBF09"></div>
-          <div class="col" style="background: #3BC3B6"></div>
-          <div class="col" style="background: #1A7DB3"></div>
-          <div class="col" style="background: #1D2029"></div>
-      </div>
-    </div>
+    <router-view></router-view>
     <footer>
       <div class="container text-center">
         <h5>¡Enterate de todo en nuestras redes sociales!</h5>
@@ -103,11 +84,3 @@ export default {
   }
 }
 </script>
-
-<style>
-footer {
-  background: #222;
-  padding-top: 40px;
-  color: #FFF;
-}
-</style>

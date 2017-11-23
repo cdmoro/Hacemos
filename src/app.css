@@ -5,8 +5,14 @@ html, body {
 
 .navbar {
     transition: all 1s;
+    min-height: 112px;
 }
 
+footer {
+    background: #222;
+    padding-top: 40px;
+    color: #FFF;
+}
 
 .navbar.inicio {
     background-color: transparent;
@@ -57,7 +63,8 @@ html, body {
 }
 
 section {
-    padding-top: 100px;
+	margin-top: 112px;
+	padding-top: 25px;
 }
 
 #logo .fa {
@@ -82,7 +89,7 @@ section {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding-top: 75px;
+    padding-top: 150px;
 }
 
 .main-title {

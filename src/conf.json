@@ -1,5 +1,5 @@
 {
-    "title": "Agrupación",
+    "title": "Hacemos.AEFIP",
     "menu": [
         {
             "nombre": "Inicio",
@@ -25,58 +25,6 @@
             "nombre": "Contacto",
             "to": "contacto",
             "icono": "envelope-o",
-            "visible": true
-        }
-    ],
-    "main": [
-        {
-            "nombre": "Organigrama y referentes",
-            "to": "sociales",
-            "visible": true
-        },
-        {
-            "nombre": "Transparencia",
-            "to": "sociales",
-            "visible": true
-        },
-        {
-            "nombre": "Plaza seca",
-            "to": "sociales",
-            "visible": true
-        },
-        {
-            "nombre": "Noticias",
-            "to": "sociales",
-            "visible": true
-        },
-        {
-            "nombre": "Programa",
-            "to": "sociales",
-            "visible": true
-        },
-        {
-            "nombre": "Sindicato",
-            "to": "sociales",
-            "visible": true
-        },
-        {
-            "nombre": "Comunidad",
-            "to": "sociales",
-            "visible": true
-        },
-        {
-            "nombre": "Espacio de mujer",
-            "to": "sociales",
-            "visible": true
-        },
-        {
-            "nombre": "Turismo",
-            "to": "sociales",
-            "visible": true
-        },
-        {
-            "nombre": "Crowfunding",
-            "to": "sociales",
             "visible": true
         }
     ],

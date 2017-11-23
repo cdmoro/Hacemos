@@ -9,26 +9,11 @@
                     <h1 class="display-3">{{ nombre }}</h1>
                     <p>
                         <router-link to="/nosotros" class="btn btn-link text-dark">¿Quiénes somos?</router-link>
-                        <a href="#!" data-target="#ifix-companies-contact" class="btn btn-default btn-default-alt hoverable hvr-tr_bx-sh goToContact" role="button">
-                            <span class="anim"></span>
-                            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                            Contactarme
-                        </a>
                     </p>
-                    <slot></slot>
                 </div>
             </div>
-            <vue-particles color="#dedede" :particleOpacity="0.7" :particlesNumber="80" shapeType="circle" :particleSize="4" linesColor="#00695C" :linesWidth="1" :lineLinked="true" :lineOpacity="0.4" :linesDistance="150" :moveSpeed="3" :hoverEffect="true" hoverMode="grab" :clickEffect="true" clickMode="push">
-            </vue-particles>
-        </div>
-        <div class="container-fluid">
-            <div class="row color-bar">
-                <div class="col" style="background: #F44336"></div>
-                <div class="col" style="background: #FFBF09"></div>
-                <div class="col" style="background: #3BC3B6"></div>
-                <div class="col" style="background: #1A7DB3"></div>
-                <div class="col" style="background: #1D2029"></div>
-            </div>
+            <!-- <vue-particles color="#dedede" :particleOpacity="0.7" :particlesNumber="80" shapeType="circle" :particleSize="4" linesColor="#00695C" :linesWidth="1" :lineLinked="true" :lineOpacity="0.4" :linesDistance="150" :moveSpeed="3" :hoverEffect="true" hoverMode="grab" :clickEffect="true" clickMode="push">
+            </vue-particles> -->
         </div>
         <section id="services">
             <div class="mb-5 container">
@@ -98,12 +83,24 @@
             </div>
         </div>
         <div class="mt-4 mb-4 container">
-            <h2>
-                <i class="fa fa-map-marker" aria-hidden="true" style="color: #F44336;"></i>
-                Nos podés encontrar acá
-            </h2>
+            <div class="row">
+                <div class="col-md-5 col-xs-12 pt-3">
+                    <h2>
+                        <i class="fa fa-map-marker" aria-hidden="true" style="color: #F44336;"></i>
+                        Nos podés encontrar acá
+                    </h2>
+                    <div class="card">
+                        <div class="card-body text-muted">
+                            <div class="text-muted">Calle 123</div>
+                            <div class="text-muted small">Localidad, Provincia</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="map"></div>
+                </div>
+            </div>
         </div>
-        <div id="map"></div>
     </div>
 </template>
 
@@ -111,7 +108,7 @@
 export default {
     data() {
         return {
-            nombre: "Agrupación"
+            nombre: "Hacemos.AEFIP"
         }
     },
     mounted: function() {
