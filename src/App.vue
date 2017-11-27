@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <b-navbar toggleable="md" type="dark" :sticky="true" :class="[$route.meta.title.toLowerCase(), {'navbar-shrink': scrollTop > 10}]">
+    <b-navbar toggleable="md" type="dark" :sticky="true" :class="[this.$route.meta.title.toLowerCase(), {'navbar-shrink': scrollTop > 10}]">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav class="ml-auto">
@@ -39,24 +39,34 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
-  name: 'app',
+  name: "app",
   data() {
     return {
-      conf: 'src/conf.json',
+      conf: "src/conf.json",
       datos: [],
       scrollTop: 0
-    }
+    };
   },
   mounted: function() {
     window.onscroll = () => {
-      this.scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-    }
+      this.scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+    };
   },
-  created: function() {    
-    this.fetchData()
+  created: function() {
+    axios
+      .get(this.conf)
+      .then(response => {
+        this.datos = response.data;
+      })
+      .catch(function(error) {
+        console.log(error)
+      })
 
-    this.$router.beforeEach((to, from, next) => {  
+    this.$router.beforeEach((to, from, next) => {
       document.title = "Hacemos.AEFIP > " + to.meta.title
       this.$Progress.start()
       next()
@@ -64,18 +74,6 @@ export default {
     this.$router.afterEach((to, from) => {
       this.$Progress.finish()
     })
-  },
-  methods: {
-    fetchData() {
-      var xhr = new XMLHttpRequest()
-      var self = this
-
-      xhr.open('GET', self.conf)
-      xhr.onload = function() {
-        self.datos = JSON.parse(xhr.response)
-      }
-      xhr.send()
-    }
   }
 }
 </script>

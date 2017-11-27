@@ -38,46 +38,40 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
-      apiURL: 'https://jsonplaceholder.typicode.com/posts',
+      apiURL: "https://jsonplaceholder.typicode.com/posts",
       posts: null,
       colores: ["4CAF50", "FFEB3B", "795548", "607D8B", "673AB7"]
-    }
+    };
   },
   created: function() {
-    this.fetchData()
-  },
-  methods: {
-    fetchData: function() {
-      var xhr = new XMLHttpRequest()
-      var self = this
-
-      xhr.open('GET', self.apiURL)
-      xhr.onload = function() {
-        self.posts = JSON.parse(xhr.response).slice(0,5)
-      }
-      xhr.send()
-      /*this.$http.get(this.apiURL).then((respuesta) => {
-        console.log(respuesta);
-      });*/
-    }
+    axios
+      .get(this.apiURL)
+      .then(response => {
+        this.posts = response.data.slice(0, 5);
+      })
+      .catch(function(error) {
+        console.log(error);
+      })
   }
 }
 </script>
 
 <style>
-  .post {
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    border-bottom: #AAA solid 1px;
-  }
-  .post > a > img {
-    width: 100%;
-  }
+.post {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: #aaa solid 1px;
+}
+.post > a > img {
+  width: 100%;
+}
 
-  .author-wrap img {
-    border-radius: 50%;
-  }
+.author-wrap img {
+  border-radius: 50%;
+}
 </style>
