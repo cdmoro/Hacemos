@@ -30,7 +30,7 @@
     ],
     "social": [
         {
-            "nombre": "agrupacion_ok",
+            "nombre": "hacemos.aefip",
             "font": "facebook-official",
             "url": "www.facebook.com",
             "color": "#3954A1",
@@ -38,7 +38,7 @@
             "visible": true
         },
         {
-            "nombre": "agrupacion",
+            "nombre": "hacemos.aefip",
             "font": "twitter",
             "url": "www.twitter.com",
             "color": "#56D7FE",
@@ -46,14 +46,14 @@
             "visible": true
         },
         {
-            "nombre": "agrupacionOk",
+            "nombre": "hacemos.aefip",
             "font": "instagram",
             "url": "www.instagram.com",
             "color": "#C0328D",
             "visible": true
         },
         {
-            "nombre": "agrupacionOk",
+            "nombre": "hacemos.aefip",
             "font": "youtube-play",
             "url": "www.youtube.com",
             "color": "#FF0000",
@@ -61,7 +61,7 @@
             "visible": true
         },
         {
-            "nombre": "agrupacion6",
+            "nombre": "hacemos.aefip",
             "font": "wordpress",
             "url": "www.wordpress.com",
             "color": "#1D8BBE",

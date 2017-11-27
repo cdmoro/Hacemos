@@ -9,12 +9,13 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-beta",
+    "axios": "^0.17.1",
+    "bootstrap": "^4.0.0-beta.2",
+    "bootstrap-vue": "^1.2.0",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1",
-    "popper.js": "^1.12.5",
     "v-img": "^0.1.0",
     "vue": "^2.3.3",
+    "vue-progressbar": "^0.7.3",
     "vue-router": "^2.7.0"
   },
   "devDependencies": {
@@ -33,7 +34,7 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "uglifyjs-webpack-plugin": "^0.4.6",
-    "vue-loader": "^12.1.0",
+    "vue-loader": "^12.2.2",
     "vue-particles": "^1.0.9",
     "vue-template-compiler": "^2.3.3",
     "webpack": "^3.1.0",

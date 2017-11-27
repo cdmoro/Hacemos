@@ -33,8 +33,8 @@
             </div>
         </section>
         <div class="pt-5 pb-3 bg-dark">
-            <div class="container">
-                <div class="row">
+            <b-container>
+                <b-row>
                     <div class="col-lg-3 col-md-6 mb-4">
                         <a class="card border-dark" href="#">
                             <div class="card-body">
@@ -79,28 +79,26 @@
                             </div>
                         </a>
                     </div>
-                </div>
-            </div>
+                </b-row>
+            </b-container>
         </div>
-        <div class="mt-4 mb-4 container">
-            <div class="row">
+        <b-container class="mt-4 mb-4">
+            <b-row>
                 <div class="col-md-5 col-xs-12 pt-3">
                     <h2>
                         <i class="fa fa-map-marker" aria-hidden="true" style="color: #F44336;"></i>
                         Nos podés encontrar acá
                     </h2>
-                    <div class="card">
-                        <div class="card-body text-muted">
-                            <div class="text-muted">Calle 123</div>
-                            <div class="text-muted small">Localidad, Provincia</div>
-                        </div>
-                    </div>
+                    <b-card class="text-muted">
+                            <div>Calle 123</div>
+                            <div class="small">Localidad, Provincia</div>
+                    </b-card>
                 </div>
-                <div class="col">
+                <b-col>
                     <div id="map"></div>
-                </div>
-            </div>
-        </div>
+                </b-col>
+            </b-row>
+        </b-container>
     </div>
 </template>
 

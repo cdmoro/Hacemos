@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-const MinifyPlugin = require("babel-minify-webpack-plugin");
+// const MinifyPlugin = require("babel-minify-webpack-plugin");
 
 module.exports = {
   //entry: ['./src/main.js', './src/app.css'],
@@ -56,12 +56,6 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin("style.css"),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-      Popper: ['popper.js', 'default']
-    })
   ],
   resolve: {
     alias: {
@@ -87,13 +81,13 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
-    /*new webpack.optimize.UglifyJsPlugin({
+    new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
       compress: {
         warnings: false
       }
-    }),*/
-    new MinifyPlugin(),
+    }),
+    // new MinifyPlugin(),
     new webpack.LoaderOptionsPlugin({
       minimize: true
     })
