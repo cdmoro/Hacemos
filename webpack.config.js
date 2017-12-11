@@ -1,8 +1,9 @@
 var path = require('path')
 var webpack = require('webpack')
-var UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+// var UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+// var UglifyJSPlugin = require('uglify-es')
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const MinifyPlugin = require("babel-minify-webpack-plugin");
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 
 module.exports = {
   //entry: ['./src/main.js', './src/app.css'],
@@ -81,13 +82,13 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
-      }
-    }),
-    // new MinifyPlugin(),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   sourceMap: true,
+    //   compress: {
+    //     warnings: false
+    //   }
+    // }),
+    new MinifyPlugin(),
     new webpack.LoaderOptionsPlugin({
       minimize: true
     })

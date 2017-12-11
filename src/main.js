@@ -5,6 +5,7 @@ import VueImg from 'v-img'
 import VueProgressBar from 'vue-progressbar'
 import BootstrapVue from 'bootstrap-vue'
 // import VueParticles from 'vue-particles'
+import VueScrollReveal from 'vue-scroll-reveal';
 
 import App from './App.vue'
 import Home from './components/Home.vue'
@@ -25,6 +26,7 @@ Vue.use(BootstrapVue)
 // Vue.use(VueParticles)
 Vue.use(VueImg)
 Vue.use(VueProgressBar, { color: 'rgb(143, 255, 199)', failedColor: 'red', height: '4px' })
+Vue.use(VueScrollReveal)
 
 const routes = [
   { path: '/', component: Home, meta: {title: 'Inicio'} },

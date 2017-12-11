@@ -10,7 +10,7 @@
             <div class="text-muted small mt-2">Cargando las novedades...</div>
           </div>
           <template v-for="(value, i) in posts">
-            <div class="post" :key="i">
+            <div class="post" :key="i" v-scroll-reveal.reset="{scale: .8}">
               <div class="post-date text-muted">01/08/2017</div>
               <h2 class="post-title">{{value.title}}</h2>
               <div>

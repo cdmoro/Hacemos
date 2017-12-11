@@ -2,7 +2,7 @@
     <div id="home">
         <div class="wrap-banner">
             <div class="main-title">
-                <div class="text-center">
+                <div class="text-center" v-scroll-reveal="{origin: 'bottom', scale: .5}">
                     <div id="logo">
                         <i class="fa fa-bandcamp" aria-hidden="true"></i>
                     </div>
@@ -19,14 +19,16 @@
             <div class="mb-5 container">
                 <div class="row justify-content-md-center">
                     <div class="col-md-8 col-xs-12">
-                        <video width="100%" controls>
+                        <video width="100%" controls v-scroll-reveal>
                             <source src="src/assets/manifestacion.mp4" type="video/mp4"> Tu explorador no soporta videos
                         </video>
                     </div>
                     <div class="col-md-3 col-xs-12">
-                        <div class="text-muted">05/08/2017</div>
-                        <div>
-                            Video sobre la movilización
+                        <div style="display: inline-block" v-scroll-reveal.reset="{origin:'right', viewOffset: { top: 112 }}">
+                            <div class="text-muted">05/08/2017</div>
+                            <div>
+                                Video sobre la movilización
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -36,7 +38,7 @@
             <b-container>
                 <b-row>
                     <div class="col-lg-3 col-md-6 mb-4">
-                        <a class="card border-dark" href="#">
+                        <a class="card border-dark" href="#" v-scroll-reveal.reset="{origin: 'left', rotate: { x: 45, y: 45, z: 0 }}">
                             <div class="card-body">
                                 <h4 class="card-title">
                                     <i class="fa fa-handshake-o" aria-hidden="true"></i>
@@ -47,7 +49,7 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-4">
-                        <a class="card border-dark" href="#">
+                        <a class="card border-dark" href="#" v-scroll-reveal.reset="{delay: 150, rotate: { x: 45, y: 45, z: 0 }}">
                             <div class="card-body">
                                 <h4 class="card-title">
                                     <i class="fa fa-comments-o" aria-hidden="true"></i>
@@ -58,7 +60,7 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-4">
-                        <a class="card border-dark" href="#">
+                        <a class="card border-dark" href="#" v-scroll-reveal.reset="{delay: 300, origin: 'bottom', easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)'}">
                             <div class="card-body">
                                 <h4 class="card-title">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -69,7 +71,7 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-4">
-                        <a class="card border-dark" href="#">
+                        <a class="card border-dark" href="#" v-scroll-reveal.reset="{delay: 450, origin: 'right', scale: 1.5}">
                             <div class="card-body">
                                 <h4 class="card-title">
                                     <i class="fa fa-globe" aria-hidden="true"></i>
