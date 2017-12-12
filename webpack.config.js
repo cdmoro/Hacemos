@@ -29,17 +29,17 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(eot|svg|ttf|woff(2)?)(\?v=\d+\.\d+\.\d+)?/,
-        loader: 'file-loader',
-        options: {
-          name: 'font/[name].[ext]'
-        }
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif|svg|jpeg)$/,
         loader: 'file-loader',
         options: {
           name: 'img/[name].[ext]'
+        }
+      },
+      {
+        test: /\.(eot|ttf|woff(2)?)(\?v=\d+\.\d+\.\d+)?/,
+        loader: 'file-loader',
+        options: {
+          name: 'font/[name].[ext]'
         }
       },
       { // regular css files

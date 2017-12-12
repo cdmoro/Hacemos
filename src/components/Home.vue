@@ -4,7 +4,7 @@
             <div class="main-title">
                 <div class="text-center" v-scroll-reveal="{origin: 'bottom', scale: .5}">
                     <div id="logo">
-                        <i class="fa fa-bandcamp" aria-hidden="true"></i>
+                        <img src="../assets/logo.svg"/>
                     </div>
                     <h1 class="display-3">{{ nombre }}</h1>
                     <p>
@@ -138,6 +138,10 @@ export default {
 </script>
 
 <style>
+#logo img {
+    width: 75%;
+}
+
 .color-bar .col {
     padding: 20px 0;
     transition: transform .4s ease;

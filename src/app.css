@@ -16,6 +16,8 @@ footer {
 
 .navbar.inicio {
     background-color: transparent;
+    /* background-image: url("assets/header.jpeg"); */
+    /* background-repeat: repeat-x; */
 }
 
 .inicio.navbar-dark .navbar-nav .nav-link {
